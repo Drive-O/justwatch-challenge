@@ -1,0 +1,45 @@
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Sample</th>
+        <th>Platform</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let test of tests">
+        <td>{{test.count}}</td>
+        <td>{{test.name}}</td>
+        <td>{{test.sample}}</td>
+        <td>{{test.platform}}</td>
+        <td><button type="button" (click)="edit(test.name, test.count, test.sample, test.platform)"
+          class="btn btn-sm btn-default pull-right">edit</button></td>
+      </tr>
+    </tbody>
+    <button type="button" class="btn btn-primary" (click)="new()">New</button>
+  </table>
+</div>
+<hr>
+<div class="container">
+  <h3>Create/Edit</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Name:</td>
+        <td><input type="text" class="pull-left name" [(ngModel)]='name' placeholder="Title"></td>
+      </tr>
+      <tr>
+        <td>Sample: </td>
+        <td><input type="text" class="pull-left sample" [(ngModel)]='sample' placeholder="0-1.0"></td>
+      </tr>
+      <tr>
+        <td>Platform: </td>
+        <td><input type="text" class="pull-left platform" [(ngModel)]='platform' placeholder="Web or Mobile"></td>
+      </tr>
+    </tbody>
+    <button type="button" class="btn btn-danger" (click)="save(name)">Save</button>
+  </table>
+  <div class="alert alert-danger" role="alert" *ngIf="error">{{errMess}}</div>
+</div>

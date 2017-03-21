@@ -1,0 +1,18 @@
+[{
+  "name": "Test 1",
+  "count": "1",
+  "sample": "0.3",
+  "platform": "Mobile"
+},
+{
+  "name": "Test 2",
+  "count": "2",
+  "sample": "0.8",
+  "platform": "Web"
+},
+{
+  "name": "Test 3",
+  "count": "3",
+  "sample": "0.5",
+  "platform": "Mobile"
+}]
